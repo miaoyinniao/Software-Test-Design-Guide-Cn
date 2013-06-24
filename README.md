@@ -13,3 +13,5 @@ Software-Test-Design-Guide-Cn
 ==============================
 版权声明
 本文档由妙音鸟翻译，英文版权作者Lee Copeland所有，翻译的稿件仅供参考，交流和学习。
+
+doc目录中index.html为入口文件，也是书的目录。
