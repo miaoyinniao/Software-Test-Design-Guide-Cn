@@ -1,0 +1,197 @@
+<html>
+<head>
+  <title>3.1 技术</title>
+  <basefont face="Tahoma" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/268644 (zh-CN); Windows/5.1.2600 Service Pack 2;"/>
+  <style>
+    body, td {
+      font-family: Tahoma;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="487"/>
+<h1>3.1 技术</h1>
+
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div>等价类划分适用步骤简单。第一，识别等价类。第二，为每个等价类创建一个测试用例，你也可以追加用例如果你有时间和精力，追加用例也许会让你更加有信心，但很少会出现追加用例能发现问题而第一个用例没有发现的情况。</div>
+<div><br></div>
+<div>看点： 有个叫Judy的学生，觉得一个等价类只有一个用例很不放心，他觉得至少应该有2个用例才感觉好一点。我告诉她如果有时间和精力的话是可以的但是追加的用例很可能是无效的。我建议她收集一下追加用例发现了问题而第一个用例没有发现的情况并告诉我。我没有在收到Judy的答复。</div>
+<div><br></div>
+<div>不同的输入类型有不同的等价类，考虑4种可能，假设防御式测试测试所有无效和有效输入，测试无效输入经常会发现大量缺陷。</div>
+<div><br></div>
+<div>如果输入是连续值，那么可以分为1个有效等价类和2个无效等价类（小于，大于）。以Goofy Mortgage Company为例，他们编写一个抵押贷款的程序，给$1,000/month和$83,333/month之间收入的人提供抵押贷款。小于 $1,000/month的没有资格，大于$83,333/month的不需要贷款，付现金就可以了。</div>
+<div>对于有效输入我们也许会选择$1,342/month，对于无效值我们也许选择$123/month和$90,000/month。</div>
+<div><br></div>
+<div><img src="3.1 技术_files/连续等价类.jpg" type="image/jpeg"/><br></div>
+<div style="text-align: center;">Figure 3-1: 连续等价类划分</div>
+<div>如果输入是不连续的范围，也是1个有效等价类和2个无效等价类（小于，大于），GMC会处理1到5套房子的情况（记住，这是很笨的做法），0或者更少的房子不是合法输入，6或者更大也不是，分数和小数更不是有效值，比如2 1/2 or 3.14159。<br></div>
+<div><img src="3.1 技术_files/离散等价类.jpg" type="image/jpeg"/></div>
+<div style="text-align: center;">Figure 3-2: 不连续等价类划分</div>
+<div>对于有效输入我们选2个房子，无效选择-2和8.<br></div>
+<div><br></div>
+<div>GMC 只贷款给个人，他们不贷款给公司，信托机构，合伙企业，其他类型的合法组织。</div>
+<div><img src="3.1 技术_files/单选等价类.jpg" type="image/jpeg"/><br></div>
+<div style="text-align: center;">Figure 3-3: 单选等价类</div>
+<div>对于有效值我们选“person”，对于无效等价类我们选&quot;corporation&quot; 或 &quot;trust&quot; 或者其他随机文本。多少无效输入用例需要创建，至少一个，也许为了保证信心追加用例。</div>
+<div><br></div>
+<div>GMC会将公寓，市区住宅，独立别墅作为抵押物。不会将单位房，拖车住房，树房或者其他建筑物。</div>
+<div><img src="3.1 技术_files/多选等价类.jpg" type="image/jpeg"/><br></div>
+<div> </div>
+<div style="text-align: center;">Figure 3-4: 多选等价类</div>
+<div style="text-align: left;">对于有效输入我们选 &quot;Condominium,&quot; &quot;Townhouse,&quot; or &quot;Single Family，因为规则里说到从一个等价类中选一个用例，更好的理解是要遍历有效输入的每个入口，也就是说当这个有效值足够小的时候。但是如果是有55个州需要选择呢？Columbia地区，美国的各个地区，要测试所有吗？世界上所有的国家呢？当前，正确答案是取决于组织风险，作为测试人员，我们漏测是不应该的。</div>
+<div style="text-align: left;"><br></div>
+<div style="text-align: left;">现实中，我们很少为一个等价类中的一个输入构建一个测试，大部分情况下，我们同步进行其他输入的组合，比如，</div>
+<div style="text-align: left;"><br></div>
+<div style="text-align: left;">关键点： 现实中，我们很少为一个等价类中的一个输入构建一个测试</div>
+<div><br></div>
+<div><br></div>
+<div>Table 3-1: A test case of valid data values.  </div>
+<div>
+<table border="1" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top">Monthly Income<br></td>
+<td valign="top"> Number of Dwellings<br></td>
+<td valign="top"> Applicant<br></td>
+<td valign="top"> Dwelling Types<br></td>
+<td valign="top"> Result<br></td>
+</tr>
+<tr>
+<td valign="top">$5,000<br></td>
+<td valign="top"> 2<br></td>
+<td valign="top"> Person<br></td>
+<td valign="top"> Condo<br></td>
+<td valign="top">Valid<br></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><br></div>
+<div>每个值都是有效输入，所以我们预期结果可以贷款。</div>
+<div>对于无效输入采用类似方法</div>
+<div><br></div>
+<div>Table 3-2: A test case of all invalid data values. 这不是一个好方法。</div>
+<div>
+<table border="1" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top">Monthly Income<br></td>
+<td valign="top"> Number of Dwellings<br></td>
+<td valign="top"> Applicant<br></td>
+<td valign="top"> Dwelling Types<br></td>
+<td valign="top"> Result<br></td>
+</tr>
+<tr>
+<td valign="top">$100<br></td>
+<td valign="top"> 8<br></td>
+<td valign="top">Partnership<br></td>
+<td valign="top">Treehouse<br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><br></div>
+<div>如果系统接受了这些值并认为可以贷款，那么系统对这些输入都没有校验。如果系统认为不能贷款，但是测试人员无法定位是哪个输入没有被系统接受。</div>
+<div><br></div>
+<div>比如：</div>
+<div>ERROR: 653X-2.7 INVALID INPUT</div>
+<div>在很多情况下，一个输入域的无效值会抵消或者掩盖另一个输入域的无效值，导致系统认为输入有效。更好的做法是一次测试一个无效输入，</div>
+<div><br></div>
+<div>Table 3-3: A set of test cases varying invalid values one by one.  </div>
+<div>
+<table border="1" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top">Monthly Income<br></td>
+<td valign="top">Number of Dwellings<br></td>
+<td valign="top">Applicant<br></td>
+<td valign="top">Dwelling Types<br></td>
+<td valign="top"> Result<br></td>
+</tr>
+<tr>
+<td valign="top"><font color="#FF0007">$100</font><br></td>
+<td valign="top">1</td>
+<td valign="top">Person<br></td>
+<td valign="top">SingleFam<br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+<tr>
+<td valign="top">$1,342<br></td>
+<td valign="top"><b><font color="#FF0007">0</font></b></td>
+<td valign="top">Person<br></td>
+<td valign="top">Condo<br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+<tr>
+<td valign="top">$1,342<br></td>
+<td valign="top">1</td>
+<td valign="top"><font color="#FF0007">Corporation</font><br></td>
+<td valign="top">Townhouse<br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+<tr>
+<td valign="top">$1,342<br></td>
+<td valign="top">1</td>
+<td valign="top">Person<br></td>
+<td valign="top"><font color="#FF0007">Treehouse</font><br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><br></div>
+<div>为了增强信息，我们输入值可以考虑多样化。</div>
+<div><br></div>
+<div>Table 3-4: A set of test cases varying invalid values one by one but also varying the valid values. </div>
+<div>
+<table border="1" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top">Monthly Income<br></td>
+<td valign="top">Number of Dwellings<br></td>
+<td valign="top">Applicant<br></td>
+<td valign="top">Dwelling Types<br></td>
+<td valign="top"> Result<br></td>
+</tr>
+<tr>
+<td valign="top"><font color="#FF0007">$100</font><br></td>
+<td valign="top">1</td>
+<td valign="top">Person<br></td>
+<td valign="top"> Single Family<br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+<tr>
+<td valign="top">$1,342<br></td>
+<td valign="top"><b><font color="#FF0007">0</font></b></td>
+<td valign="top">Person<br></td>
+<td valign="top">Condominium<br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+<tr>
+<td valign="top">$5,342<br></td>
+<td valign="top">3</td>
+<td valign="top"><font color="#FF0007">Corporation</font><br></td>
+<td valign="top">Townhouse<br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+<tr>
+<td valign="top"><font color="#FF0007">$10,000</font><br></td>
+<td valign="top">2</td>
+<td valign="top">Person<br></td>
+<td valign="top"><font color="#FF0007">Treehouse</font><br></td>
+<td valign="top">Invalid<br></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><br></div>
+<div>另外一个使用等价类划分的方法是检查输出而不是输入，将输出值进行等价类划分，在确定哪些输入可以触发输出等价类。这个方法的优势是可以引导测试人员先检查，后测试，每个不同类型的输出都可以覆盖到。但是这个方法具有欺骗性，在前面的例子里，对于人力资源系统，其中一个输出时NO，不要雇佣。粗略的看，输入为这个等价类{0, 1, ..., 14, 15}，注意不是所有的输入集，{55, 56, ..., 98, 99} 作为输入也可以让系统输出NO，很显然要保证所有隐含的输出都覆盖很重要，同时要注意不能忽略重要输入。</div>
+<div><br></div>
+<div><br></div>
+</div>
+</div></body></html> 

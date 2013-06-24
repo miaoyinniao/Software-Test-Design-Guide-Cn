@@ -1,0 +1,240 @@
+<html>
+<head>
+  <title>4.1 技术</title>
+  <basefont face="Tahoma" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/268644 (zh-CN); Windows/5.1.2600 Service Pack 2;"/>
+  <style>
+    body, td {
+      font-family: Tahoma;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="747"/>
+<h1>4.1 技术</h1>
+
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div style="margin-bottom: 0px; text-align: left; margin-left: 0.15in; margin-right: 0.15in;">
+<div>
+<h2 style="text-align: -webkit-auto; margin-top: 0em; margin-bottom: 0em; background-color: white; background-image: none;"><font face="Times"><span style="font-weight: normal; font-size: 18px;">边界值测试的步骤很简单，第一，识别等价类，第二，识别每个等价类的边界，第三，写个边界值点，边界值下，边界值上的</span></font><span style="font-family: Times; font-size: 18px; font-weight: normal;">用例，上，下的概念是相对关系，取决于数据值单位。如果边界值是16，那么上下是15和17， 如果边界值是￥5.00，那么上下是4.99和5.01，另外，如果边界值是￥5，那么上下是4和6.</span></h2>
+<div><span style="font-family: Times; font-size: 18px; font-weight: normal;">关键点： </span><span style="font-size: 20px; font-weight: bold;"><font face="Times"><span style="font-weight: normal; font-size: 18px;">写个边界值点，边界值下，边界值上的</span></font><span style="font-family: Times; font-size: 18px; font-weight: normal;">用例</span></span></div>
+<div><font face="Times"><span style="font-size: 18px;">注意上点有可能是另外一个等价类，没有理由重复用例，下的也同样道理。</span></font></div>
+<div><font face="Times"><span style="font-size: 18px;">当然，如果你有时间你可以加一些等价类中的用例，基于上一章的讨论，这些追加用例实际上没什么效果。</span></font></div>
+<div><font face="Times"><span style="font-size: 18px;">边界值测试是在连续范围值中是最适合使用的。回到</span></font><span style="font-size: 18px;"><a name="IDX-43" style="font-family: Arial, Arial, Helvetica, sans-serif;"></a></span>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-size: 18px;">Goofy Mortgage Company的例子中，边界值应该是什么？月收入边界值是</span></p>
+<span style="font-size: 18px;"><a name="IDX-43" style="font-family: Arial, Arial, Helvetica, sans-serif;"></a></span>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-size: 18px;">$1,000/month and $83,333/month（假设单位是美元）。</span></p>
+</div>
+<div style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 2em; margin-left: 0.25in; margin-bottom: 1em;"><span style="font-size: 18px;"><a name="IDX-43"></a><a name="115"></a><a name="ch04fig01"></a><a href="itss://chm/7898/images/fig61%5F01%5F0%2Ejpg" name="IMG_13" target="_parent"><img src="4.1 技术_files/Image.jpg" type="image/jpeg" alt="Click To expand" border="0" height="158" width="350"/></a> <br style="line-height: 1;">
+<span style="margin-top: 0.5em; margin-left: 0em; margin-right: 8em;"><span style="font-weight: bold;">Figure 4-1: </span>Boundary values for a continuous range of inputs.</span></span></div>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;"><span style="font-size: 18px;">选择下点： {$999, $1,000, $1,001} 和上点：{$83,332, $83,333, $83,334} </span></p>
+<div><span style="font-size: 18px;">因为GMC贷款给1-5套房子抵押。0或者更小，6或者更大都是无效的。下面定义了边界：</span></div>
+<div><br></div>
+<div style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 2em; margin-left: 0.25in; margin-bottom: 1em;"><span style="font-size: 18px;"><a name="116"></a><a name="ch04fig02"></a><a href="itss://chm/7898/images/fig61%5F02%5F0%2Ejpg" name="IMG_14" target="_parent"><img src="4.1 技术_files/Image [1].jpg" type="image/jpeg" alt="Click To expand" border="0" height="150" width="350"/></a> <br style="line-height: 1;">
+<span style="margin-top: 0.5em; margin-left: 0em; margin-right: 8em;"><span style="font-weight: bold;">Figure 4-2: </span>Boundary values for a discrete range of inputs.</span></span></div>
+<div><br></div>
+<div><span style="font-size: 18px;">单个输入测试是很少见的，我们组合如下：</span></div>
+<span style="font-size: 18px;"><a name="118"></a><a name="ch04table01" style="font-family: Arial, Arial, Helvetica, sans-serif;"></a></span>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 851px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 4-1: </span>A set of test cases containing combinations of valid (on the boundary) values and invalid (off the boundary) points.</span></caption>
+<thead>
+<tr valign="top">
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;" valign="middle">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Monthly Income</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;" valign="middle">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Number of Dwellings</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;" valign="middle">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Result</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;" valign="middle">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Description</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$1,000</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">1</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Valid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Min income, min dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$83,333</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">1</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Valid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Max income, min dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$1,000</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">5</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Valid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Min income, max dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$83,333</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">5</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Valid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Max income, max dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$1,000</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">0</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Min income, below min dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$1,000</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">6</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Min income, above max dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$83,333</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">0</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Max income, below min dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$83,333</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">6</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Max income, above max dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$999</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">1</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Below min income, min dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$83,334</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">1</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Above max income, min dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$999</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">5</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Below min income, max dwellings</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">$83,334</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">5</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Above max income, max dwellings</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;">以 &quot;monthly income&quot; 为X轴，以number of dwellings&quot; 为Y轴，显示上下和边界点。</p>
+<div style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 2em; margin-left: 0.25in; margin-bottom: 1em;"><span style="font-size: 18px;"><a name="ch04table01"></a><a name="119"></a><a name="ch04fig03"></a><a href="itss://chm/7898/images/fig62%5F01%5F0%2Ejpg" name="IMG_15" target="_parent"><img src="4.1 技术_files/Image [2].jpg" type="image/jpeg" alt="Click To expand" border="0" height="209" width="350"/></a> <br style="line-height: 1;">
+<span style="margin-top: 0.5em; margin-left: 0em; margin-right: 8em;"><span style="font-weight: bold;">Figure 4-3: </span>Data points on the boundaries and data points just outside the boundaries.</span></span></div>
+<div><br></div>
+<div><span style="font-size: 18px;">注意四个</span><span style="font-size: 18px;">组合</span><span style="font-size: 18px;">输入，有8个点在边界外，而边界外的点一般是一个有效输入，一个是无效输入。</span></div>
+<div><br></div>
+</div>
+</div>
+<div><br></div>
+</div>
+</div></body></html> 

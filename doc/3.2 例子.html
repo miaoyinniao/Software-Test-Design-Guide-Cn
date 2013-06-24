@@ -1,0 +1,205 @@
+<html>
+<head>
+  <title>3.2 例子</title>
+  <basefont face="Tahoma" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/268644 (zh-CN); Windows/5.1.2600 Service Pack 2;"/>
+  <style>
+    body, td {
+      font-family: Tahoma;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="332"/>
+<h1>3.2 例子</h1>
+
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<span style="font-size: 18px;"><font face="Verdana, Arial, Helvetica, sans-serif">例1：</font></span>
+<div><span style="font-size: 18px;"><font face="Verdana, Arial, Helvetica, sans-serif">      参考</font></span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex01">Brown &amp; Donaldson Web site站点的</a></span><span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px;">Trade 页面</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><b style="font-weight: bold;">Order Type域值。设计者选择单选作为输入，这个是个好的设计，因为减少了大量用例。如果实现采用文本输入，比如需要输入</b></span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">&quot;Buy&quot; or &quot;Sell&quot;</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"> ，那么测试需要划分有效输入</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">{Buy, Sell}</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"> 和无效输入</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">{Trade, Punt, ...}等，还有</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">&quot;buy&quot;, &quot;bUy&quot;, &quot;BUY&quot;呢？有效还是无效？测试人员需要去翻一下需求来看是否有效。</span></div>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">       看点：让设计人员和编程者知道他们是怎么帮到你，他们会感激你并会继续这样做。</span></div>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">因为单选按钮实现没有无效输入，因此不需要测试。只有</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">{Buy, Sell}</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"> 需要测试。</span></div>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><br></span></div>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">例2：同样，参考</span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex02"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><b style="font-weight: bold;">Trade页面</b></span></p>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex02"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><b style="font-weight: bold;">Quantity</b></span></p>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><b style="font-weight: bold;">域值，输入可以是4个数字</b></span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex02"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">(0, 1, ..., 8,9) ，即1到9999.集合</span></p>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex02"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"> {1, 22, 333, 4444}是有效输入而集合</span></p>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex02"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<div style="display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">{-42, 0, 12345, SQE, $#@%}是无效输入。</span></div>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex02"></a></span>
+<div style="margin-left: 0px; display: inline !important;"></div>
+<div style="margin-left: 0px; display: inline !important;">
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><br></span></div>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">       看点： 设计人员和开发人员经常使用GUI设计工具，可以强制限制输入数据的长度和内容类型。鼓励他们使用这些工具，那么可以保证测试聚焦需求实现正确了。</span></div>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><br></span></div>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex02"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<div style="display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">例3：Trade 页面用户通过Symbol表明货物是卖还是买，有效输入是</span></div>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex03"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">{A, AA, AABC, AAC, ..., ZOLT, ZOMX, ZONA, ZRAN)，无效输入是不在有效值列表里面的字符任意组合。有效输入可以是</span></p>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex03"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">{A, AL, ABE, ACES, AKZOY)而无效输入可以是</span></p>
+</div>
+<span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="ch03ex03"></a></span>
+<div style="margin-left: 0px; display: inline !important;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px; display: inline !important;"><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"> {C, AF, BOB, CLUBS, AKZAM, 42, @#$%)。</span></p>
+</div>
+</div>
+<div>
+<div style="font-family: Arial, Arial, Helvetica, sans-serif; margin-bottom: 0px; text-align: left; margin-left: 0.15in; margin-right: 0.15in;">
+<div>
+<div style="margin-top: 1em;"><span style="font-size: 18px;"><a name="ch03ex03"></a></span>
+<div style="margin-left: 0px; display: inline !important;"><span style="font-size: 18px;">  更多信息参考</span></div>
+<span style="font-size: 18px;"><b style="font-weight: bold;">Symbol Lookup按钮，查看有效输入。</b></span></div>
+<div style="margin-top: 1em;"><span style="font-size: 18px;"><b style="font-weight: bold;">例4</b></span></div>
+<div style="margin-top: 1em;"><span style="font-size: 18px;"><b style="font-weight: bold;">一般不会单独测试单个输入。更常见的是组合个输入，比如：</b></span></div>
+<div style="margin-top: 1em;"><span style="font-size: 18px;"><a name="ch03ex04"></a></span></div>
+<span style="font-size: 18px;"><a name="98"></a><a name="ch03table05"></a></span>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 851px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 3-5: </span>A set of test cases varying invalid values one by one.</span></caption>
+<thead>
+<tr valign="top">
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Buy/Sell</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Symbol</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Quantity</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Result</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Buy</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">A</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">10</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Valid</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Buy</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b><font color="#FF4517">C</font></b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">20</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Buy</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">A</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b><font color="#FF4517">0</font></b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Sell</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">ACES</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">10</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Valid</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Sell</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;"><font color="#FF4517">BOB</font></b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">33</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Sell</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">ABE</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;"><font color="#FF4517">-3</font></b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Invalid</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<hr size="1">
+<a name="ch03table05" style="font-size: 18px;"></a>
+<table bgcolor="#E6E6E6" border="0" cellpadding="0" cellspacing="0" style="font-family: Verdana, Arial, Helvetica, sans-serif;" width="100%">
+<tbody>
+<tr style="background-image: url(itss://chm/7898/images/tile_back.gif);">
+<td align="left" width="30%">
+<div style="margin-left: 0.15in;"><a href="itss://chm/7898/DDU0024.html"></a></div>
+</td>
+<td align="center" width="40%"><a href="itss://chm/7898/toc.html" style="color: white; text-decoration: none;"> &lt; Day Day Up &gt; </a></td>
+<td align="right" width="30%">
+<div style="margin-right: 0.15in;"><a href="itss://chm/7898/DDU0026.html"></a></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br></div>
+</div>
+</div></body></html> 

@@ -1,0 +1,155 @@
+<html>
+<head>
+  <title>6.0 Pairwise测试</title>
+  <basefont face="Tahoma" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/268644 (zh-CN); Windows/5.1.2600 Service Pack 2;"/>
+  <style>
+    body, td {
+      font-family: Tahoma;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="500"/>
+<h1>6.0 Pairwise测试</h1>
+
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div style="font-family: Arial, Arial, Helvetica, sans-serif; margin-bottom: 0px; text-align: left; margin-left: 0.15in; margin-right: 0.15in;"><span style="font-size: 18px;"><a name="IDX-61"></a></span>
+<blockquote>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;"><span style="font-size: 18px;"><i style="font-style: italic;">Anton was attracted to Angela like a moth to a flame - not just any moth, but one of the giant silk moths of the genus Hyalophora, perhaps Hyalophora euryalus, whose great red</i>-<i style="font-style: italic;">brown wings with white basal and postmedian lines flap almost languorously until one ignites in the flame, fanning the conflagration to ever greater heights until burning down to the hirsute thorax and abdomen, the fat-laden contents of which provide a satisfying sizzle to end the agony.</i></span></p>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;"><span style="font-size: 18px;">— Andrew Amlen</span></p>
+</blockquote>
+<a name="167"></a><a name="IDX-62"></a>
+<div><span style="font-size: 18px;"><a name="IDX-62"></a></span>
+<h2 style="margin-top: 1.2em; margin-bottom: 0em; color: rgb(0, 0, 128); background-color: white; background-image: none; font-weight: bold;"><span style="font-size: 18px;">简介</span></h2>
+<div><span style="font-size: 18px;">就像</span><a name="ch06lev1sec1" style="font-size: 18px;">Monty Python说的，现在让事情变得不同一些</a></div>
+<div><a name="ch06lev1sec1" style="font-size: 18px;">考虑下面的情况：</a></div>
+<div><a name="ch06lev1sec1" style="font-size: 18px;">一个WEB站点需要支持不同的浏览器</a><a name="ch06lev1sec1" style="font-size: 18px;">—Internet Explorer 5.0, 5.5, and 6.0, Netscape 6.0, 6.1, and 7.0, Mozilla 1.1, and Opera 7; 使用不同的插件—RealPlayer, MediaPlayer, or none; 不同的客户端操作系统—Windows 95, 98, ME, NT, 2000, and XP; 从不同的服务器接收信息—IIS, Apache, and WebLogic; 跑在不同的服务器操作系统—Windows NT, 2000, and Linux.</a></div>
+<div><a name="ch06lev1sec1"><b style="font-weight: bold; font-size: 18px;">组合计算</b></a></div>
+<a name="ch06lev1sec1" style="font-size: 18px;">8 browsers</a><br>
+<a name="ch06lev1sec1" style="font-size: 18px;">3 plug-ins</a><br>
+<a name="ch06lev1sec1" style="font-size: 18px;">6 client operating systems</a><br>
+<a name="ch06lev1sec1" style="font-size: 18px;">3 servers</a><br>
+<a name="ch06lev1sec1" style="font-size: 18px;">3 server OS</a><br>
+<a name="ch06lev1sec1" style="font-size: 18px;">1,296 组合.</a><br>
+<div><a name="ch06lev1sec1"><b style="font-weight: bold; font-size: 18px;">一个银行系统创建一个新数据的过程，银行有不同客户--客户，重要客户，公司，非盈利组织；不同种类的账户---查询，存款，抵押贷款，消费贷款，商业贷款；操作不同的州，每个州的规则不同---</b></a><a name="ch06lev1sec1" style="font-size: 18px;">California, Nevada, Utah, Idaho, Arizona, and New Mexico.</a></div>
+<a name="ch06lev1sec1"><b style="font-weight: bold; font-size: 18px;">Bank Combinations</b></a><br>
+<a name="ch06lev1sec1" style="font-size: 18px;">4 customer types</a><br>
+<a name="ch06lev1sec1" style="font-size: 18px;">5 account types</a><br>
+<a name="ch06lev1sec1" style="font-size: 18px;">6 states</a><br>
+<div><a name="ch06lev1sec1" style="font-size: 18px;">120 combinations.</a><a name="ch06lev1sec1" style="font-size: 18px;"><br></a></div>
+<div><span style="font-size: 18px;">在一个面向对象的系统中，类A包含参数P，传给类X，类B,C,D继承A，因此他们能发送数据，类</span><a name="ch06lev1sec1" style="font-size: 18px;">Q, R, S和T继承P因此可以作为参数，类Y,Z继承X因此能接收消息。</a></div>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px;"><a name="ch06lev1sec1"><b style="font-weight: bold; font-size: 18px;">OO Combinations</b></a></p>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;"><a name="ch06lev1sec1" style="font-size: 18px;">4 senders</a></p>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;"><a name="ch06lev1sec1" style="font-size: 18px;">5 parameters</a></p>
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;"><a name="ch06lev1sec1" style="font-size: 18px;">3 receivers</a></p>
+<div><a name="ch06lev1sec1" style="font-size: 18px;">60 combinations.</a></div>
+<span style="font-size: 18px;"><a name="169"></a><a name="IDX-63">     看点： 课堂的学生经常花时间思考坏的方式做事，培养选择潦倒的技能，这对评估他们的想法时是无价的。<br></a></span>
+<table border="0" cellpadding="0" cellspacing="0" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-left: 0.25in; margin-bottom: 0px;">
+<tbody>
+<tr>
+<td valign="top">你相信</td>
+<td style="color: rgb(0, 0, 128); font-family: Arial, Arial, Helvetica, sans-serif; font-weight: bold; margin-left: 0.25in; margin-top: 0px; margin-bottom: 0px;" valign="top" width="64">吗？</td>
+<td style="margin-left: 0.25in; margin-top: 0px; margin-bottom: 0px;" valign="top"><br></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><span style="font-size: 18px;"><b>我课堂中的学生分享了这个故事，他的组织是采用所谓后安装测试计划运作的，这听起来很深奥需要解释。无论测试进行和测试通过都在测试计划中体现。</b></span></div>
+</blockquote>
+<span style="font-size: 18px;"><a name="IDX-63"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">他们的共同点是什么？每个都有大量组合需要测试，每个组合我们不测试的话都可能有风险，组合太多导致我们没有资源去创建和运行用例，他们太多了，也许我们应该基于我们的资源选择一个子集，有什么方法可以选择这个子集吗？下面列出了从最坏的情况到好的：</span></div>
+</div>
+<div><span style="font-size: 18px;"><a name="IDX-63"></a></span>
+<div style="margin-top: 0.9em; width: 1023px;">
+<table border="0" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span><a href="itss://chm/7898/images/fig81%5F01%5F0%2Ejpg" name="IMG_17" target="_parent"><img src="6.0 Pairwise测试_files/Image.jpg" type="image/jpeg" alt="Click To expand" border="0" height="498" width="54"/></a></span></p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: square; list-style-position: initial; list-style-image: initial; margin-top: 0.9em; margin-bottom: 0px; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">不要测试了，因为组合太多了，所有测试用例很多，不测了</p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">测试所有组合（一次），但是项目错过了最佳市场时间窗，因此每个人崩溃了，公司被淘汰了。</p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">选择一两个用例，希望OK。</p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">选择已经跑过的用例，也许开发人员跑的用例，把这些用例放到测试计划并再跑一遍。</p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">选择容易创建和执行的用例，忽略他们对于产品的意义。</p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">列出所有组合并选择最先的一些。</p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">列出所有组合并选择随机的子集。</p>
+</li>
+</ul>
+<a name="170"></a><a name="IDX-64"></a></td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span><img src="6.0 Pairwise测试_files/Image [1].jpg" type="image/jpeg" alt="" border="0" height="200" width="111"/></span></p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: square; list-style-position: initial; list-style-image: initial; margin-top: 0.9em; margin-bottom: 0px; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">魔术般的，选择相当小的子集并能够找到比预期更多的缺陷，</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><br></div>
+<div>最下面的计划像是成功者但是很模糊，问题是---什么是魔法，它能够使你选择到特殊的一个子集。</div>
+<span style="font-size: 18px;"><a name="IDX-63"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">看点： 随机选择也许是一个很好的选择子集的方法，大部分人很难选择到正确的随机的子集。</span></div>
+<span style="font-size: 18px;"><a name="IDX-63"></a></span>
+<div><span style="font-size: 18px;"><span style="font-size: 18px;"><a name="IDX-63"></a></span></span>
+<div><span style="font-size: 18px;">答案是不要试图测试所有输入的值的所有组合，但是去测试变量的所有两两组合。它能够大大减少用例数量，考虑如下例子：</span></div>
+<div>
+<ul>
+<li><span style="font-size: 18px;"><a name="IDX-63"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">如果系统有4个输入参数，每个有3个输入值，全组合是3^4 = 81 ,用Pairwise的方法只需9个用例。</span></div>
+<br></li>
+<li><a name="IDX-63"></a>
+<div style="display: inline !important;">如果系统有13个输入参数，每个有3个输入值，全组合是3^13 = 1594323 ,用Pairwise的方法只需15个用例。</div>
+<br></li>
+<li><span style="font-size: medium;"><span style="font-size: 18px;"><a name="IDX-63"></a></span></span>
+<div style="display: inline !important;"><span style="font-size: medium;">如果系统有20个输入参数，每个有10个输入值，全组合是10^20 ,用Pairwise的方法只需180个用例。</span></div>
+<span style="font-size: 18px;"><a name="IDX-63"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;"> </span></div>
+<br></li>
+</ul>
+</div>
+</div>
+</div>
+<div><span style="font-size: 18px;"><a name="IDX-63"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">有很多证据表明Pairwise测试带来了很多好处，不过，实际的案例并不多：</span></div>
+</div>
+<div>
+<ul>
+<li><span style="font-size: 18px;"><a name="IDX-63"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">在</span></div>
+<span style="font-size: 18px;"><a name="IDX-63">AT&amp;T的Brownlie出版的关于本地化基于网络的电子邮件系统的案例中，Pairwise测试发现花50%的工作量发现了比原来的计划的开发执行1500用例多28%的缺陷。</a></span><br></li>
+<li><span style="font-size: 18px;">在</span><a name="IDX-65" style="font-size: 18px;">National Institute of Standards and Technology出版的</a><span style="font-size: 18px;">Wallace和kuhn关于医学设备15年来的缺陷数据回顾，他们得出98%的软件故障可以通过测试全对偶参数组合发现。</span><br></li>
+<li><span style="font-size: 18px;">Kuhn和Reilly分析</span><a name="IDX-65" style="font-size: 18px;">Mozilla浏览器数据库上的缺陷记录，他们确定Pairwise可以发现76%的错误。</a><br></li>
+</ul>
+</div>
+<div><span style="font-size: 18px;">为什么Pairwise如此奏效？不知道。没有特别的软件理论能支撑，一个假设是大部分缺陷分布在单模缺陷（基本功能缺陷）和二模缺陷（全对偶的功能组合缺陷），Pairwise测试定义最小子集引导测试发现单模和多模缺陷。技术的成功在很多项目中体现，包括文档和非文档的。</span></div>
+<div><span style="font-size: 18px;">注意：Pairwise测试也许不能用于开发和测试认为频繁使用和高风险的模块，如果组合存在，使用Pairwise测试，然后添加相关用例来减少风险。<br></span></div>
+</div>
+</div>
+</div></body></html> 

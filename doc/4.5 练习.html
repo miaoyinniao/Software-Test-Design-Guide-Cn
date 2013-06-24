@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>4.5 练习</title>
+  <basefont face="Tahoma" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/268644 (zh-CN); Windows/5.1.2600 Service Pack 2;"/>
+  <style>
+    body, td {
+      font-family: Tahoma;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="896"/>
+<h1>4.5 练习</h1>
+
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div style="margin-bottom: 0px; text-align: left; margin-left: 0.15in; margin-right: 0.15in;">
+<div>
+<h2 style="margin-top: 0em; margin-bottom: 0em; background-color: white; background-image: none;"><font face="Times"><span style="font-size: 18px; font-weight: normal;">1. 以下练习参考</span></font><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal;"><a name="IDX-36"><span style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">Stateless University Registration System 站点，为以下问题定义边界和测试用例。</span></a></span></h2>
+<div>
+<ul>
+<li><span style="font-family: Times; font-size: 18px;">ZIP码 - 5个数字</span><br></li>
+<li><span style="font-family: Times; font-size: 18px;">// {00000 -  99999}   {-1，10101010}</span></li>
+</ul>
+<div><font face="Arial, Arial, Helvetica, sans-serif"><span style="font-size: 18px;">     首先ZIP只有数字组成，然后确定最小和最大值，对于额外情况，确定加拿大的编码。</span></font></div>
+<ul>
+<li><font face="Times"><span style="font-size: 18px;"><br></span></font></li>
+<li><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="IDX-36"><span style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">名字 -  1到15个字符（包含字母，周期，连字符，省略号，空格，数字）</span></a></span><br></li>
+<li><span style="font-family: Times; font-size: 18px;">//{1,1-...... 9a8，1010101010} {00000000000000000，%%%%，####}</span><br></li>
+<li><font face="Times"><span style="font-size: 18px;"><br></span></font></li>
+<li><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="IDX-36"><span style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">用户ID - 8个字符，至少2个非字母（数字，特殊字符，不可打印字符）</span></a></span><br></li>
+<li><span style="font-family: Times; font-size: 18px;">//{shjhfk23，fkfjkf%%} {ajjajajajaajajajja，              ，akakak%%}</span><br></li>
+<li><font face="Times"><span style="font-size: 18px;"><br></span></font></li>
+<li><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="IDX-36"><span style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">学生ID - 9个字符，前面3个字符表示科系，后面6个是学号。有效地</span></a></span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;"><a name="IDX-36"><span style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">学生家乡如： </span></a></span><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">AN, Annandale; LC, Las Cruces; RW, Riverside West; SM, San Mateo; TA, Talbot; WE, Weber; and WN, Wenatchee. </span><br></li>
+<li><span style="font-family: Arial, Arial, Helvetica, sans-serif; font-size: 18px;">//{AN766777,LC999999,RW000000,SW999999,TA222222,WN222222,WE333333} {hh333333，啊大家阿卡vjvlds}</span></li>
+</ul>
+</div>
+<ol style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.35in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<ol style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.35in;" type="a">
+<li style="margin-top: 0.9em; margin-left: 0.5em;"><span style="font-size: 18px;"><a name="129"></a><a name="IDX-48"></a></span>
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.25in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<div><span style="font-size: 18px;"><br></span></div>
+<div><span style="font-size: 18px;"><br></span></div>
+<div><span style="font-size: 18px;">PHY - Physics</span></div>
+<div><span style="font-size: 18px;"><br></span></div>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px;"><span style="font-size: 18px;">EGR - Engineering</span></p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px;"><span style="font-size: 18px;">ENG - English</span></p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px;"><span style="font-size: 18px;">LAN - Foreign languages</span></p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px;"><span style="font-size: 18px;">CHM - Chemistry</span></p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px;"><span style="font-size: 18px;">MAT - Mathematics</span></p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px;"><span style="font-size: 18px;">PED - Physical education</span></p>
+</li>
+<li style="margin-top: 0.9em; margin-left: 0.5em;">
+<p style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px;"><span style="font-size: 18px;">SOC - Sociology</span></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div><br></div>
+</div>
+</div></body></html> 

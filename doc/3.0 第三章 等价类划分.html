@@ -1,0 +1,137 @@
+<html>
+<head>
+  <title>3.0 第三章 等价类划分</title>
+  <basefont face="Tahoma" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/268644 (zh-CN); Windows/5.1.2600 Service Pack 2;"/>
+  <style>
+    body, td {
+      font-family: Tahoma;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="1140"/>
+<h1>3.0 第三章 等价类划分</h1>
+
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<br>
+<div>On the fourth day of his exploration of the Amazon, Byron climbed out of his inner tube, checked the latest news on his personal digital assistant (hereafter PDA) outfitted with wireless technology, and realized that the gnawing he felt in his stomach was not fear—no, he was not afraid, rather elated—nor was it tension—no, he was actually rather relaxed—so it was in all probability a parasite.</div>
+<div><br></div>
+<div>— Chuck Keelan</div>
+<div><br></div>
+<div>介绍</div>
+<div>等价类划分是用于减少测试用例到可管理数量并且仍能够做到有效覆盖。这种测试方法在测试人员中潜意识里面已经用到了，虽然他们并不知道他们用了这个正式的测试设计方法。许多测试者已经在逻辑上推导出它的用处，而另一些则发现它只是因为缺乏时间更彻底的测试。</div>
+<div>考虑下面这种情况，我们编写一个人力资源管理模块，确定基于年龄的雇佣程序。规则如下：</div>
+<div><br></div>
+<div>0–16   不雇佣</div>
+<div> </div>
+<div>16–18  能雇佣兼职</div>
+<div> </div>
+<div>18–55  全职雇佣</div>
+<div> </div>
+<div>55–99   不雇佣</div>
+<div><br></div>
+<div>注意：如果你看出了其中的问题，我们下章会说明的。</div>
+<div><br></div>
+<div>观察</div>
+<div><br></div>
+<div>通过这个规则我们看到， Doogie Houser, M.D. or Col. Harlan Sanders都是不能雇佣的，一个太小，一个太大。</div>
+<div>我们能这么测试吗？0, 1, 2, 3, 4, 5, 6, 7, 8, ..., 90, 91, 92, 93, 94, 95, 96, 97, 98, 99。如果你有很多时间是可以的。如果程序是下面这样实现的，我们需要测试所有年龄。（如果你没有编程经验，没关系，程序很容易读懂，我会提醒你）</div>
+<div>
+<hr></div>
+<div>        If (applicantAge == 0) hireStatus=&quot;NO&quot;;</div>
+<div>        If (applicantAge == 1) hireStatus=&quot;NO&quot;;</div>
+<div>        …</div>
+<div>        If (applicantAge == 14) hireStatus=&quot;NO&quot;;</div>
+<div>        If (applicantAge == 15) hireStatus=&quot;NO&quot;;</div>
+<div>        If (applicantAge == 16) hireStatus=&quot;PART&quot;;</div>
+<div>        If (applicantAge == 17) hireStatus=&quot;PART&quot;;</div>
+<div>        If (applicantAge == 18) hireStatus=&quot;FULL&quot;;</div>
+<div>        If (applicantAge == 19) hireStatus=&quot;FULL&quot;;</div>
+<div>        …</div>
+<div>        If (applicantAge == 53) hireStatus=&quot;FULL&quot;;</div>
+<div>        If (applicantAge == 54) hireStatus=&quot;FULL&quot;;</div>
+<div>        If (applicantAge == 55) hireStatus=&quot;NO&quot;;</div>
+<div>        If (applicantAge == 56) hireStatus=&quot;NO&quot;;</div>
+<div>        …</div>
+<div>        If (applicantAge == 98) hireStatus=&quot;NO&quot;;</div>
+<div>        If (applicantAge == 99) hireStatus=&quot;NO&quot;;</div>
+<div>
+<hr>
+基于这个实现，测试套中的测试通过和其他测试无关，不是通过，就是失败。</div>
+<div>幸运的是，程序员不会这么写程序的。也许是这样写的：</div>
+<div>
+<hr></div>
+<div>        If (applicantAge &gt;= 0 &amp;&amp; applicantAge &lt;=16)</div>
+<div>                  hireStatus=&quot;NO&quot;;</div>
+<div>        If (applicantAge &gt;= 16 &amp;&amp; applicantAge &lt;=18)</div>
+<div>                  hireStatus=&quot;PART&quot;;</div>
+<div>        If (applicantAge &gt;= 18 &amp;&amp; applicantAge &lt;=55)</div>
+<div>                  hireStatus=&quot;FULL&quot;;</div>
+<div>        If (applicantAge &gt;= 55 &amp;&amp; applicantAge &lt;=99)</div>
+<div>                  hireStatus=&quot;NO&quot;;</div>
+<div>
+<hr>
+这个是典型的实现，很明显第一个需求我们不需要测试0, 1, 2, ... 14, 15, and 16，只需要测试一个数值就可以了，那么选什么数呢？所有这个范围的数字任何一个都可以。其他范围也是一样。这里的范围就可以定义为等价类。一个等价类包含一组数据，这些数据对程序或模块来说都是一样的。</div>
+<div><br></div>
+<div>在测试中，类别中的任一数据都是和其他数据等价的，特别的，我们预期如下：</div>
+<div>
+<ul>
+<li>如果一个等价类中的一个测试用例发现一个缺陷，那么等价类中的所有其他测试用例都能发现同样的缺陷。<br></li>
+<li>如果一个等价类中的一个测试用例未发现缺陷，那么等价类中的所有其他测试用例也不能发现缺陷。</li>
+</ul>
+</div>
+<div>关键点： 一组用例形成一个等价来遵循如下：</div>
+<div>
+<ul>
+<li>他们测试同样的东西。<br></li>
+<li>一个用例发现一个缺陷，那么其他也能发现。<br></li>
+<li>一个用例不能发现缺陷，那么其他也不能发现。<br></li>
+</ul>
+</div>
+<div> Cem Kaner  &lt;Testing Computer Software&gt;</div>
+<div> </div>
+<div>当然，这个方法假设，需求定义了这些不同的等价类。同样它假设程序员没有采用类似如下的编程：</div>
+<div>
+<hr></div>
+<div>       If (applicantAge &gt;= 0 &amp;&amp; applicantAge &lt;=16)</div>
+<div>                hireStatus=&quot;NO&quot;;</div>
+<div>       If (applicantAge &gt;= 16 &amp;&amp; applicantAge &lt;=18)</div>
+<div>                hireStatus=&quot;PART&quot;;</div>
+<div>       If (applicantAge &gt;= 18 &amp;&amp; applicantAge &lt;=41)</div>
+<div>                hireStatus=&quot;FULL&quot;;</div>
+<div>       // strange statements follow</div>
+<div>       If (applicantAge == 42 &amp;&amp; applicantName == &quot;Lee&quot;)</div>
+<div>                hireStatus=&quot;HIRE NOW AT HUGE SALARY&quot;;</div>
+<div>       If (applicantAge == 42 &amp;&amp; applicantName &lt;&gt; &quot;Lee&quot;)</div>
+<div>                hireStatus=&quot;FULL&quot;;</div>
+<div>       // end of strange statements</div>
+<div><br></div>
+<div>       If (applicantAge &gt;= 43 &amp;&amp; applicantAge &lt;=55)</div>
+<div>                hireStatus=&quot;FULL&quot;;</div>
+<div>       If (applicantAge &gt;= 55 &amp;&amp; applicantAge &lt;=99)</div>
+<div>                hireStatus=&quot;NO&quot;;</div>
+<div>
+<hr>
+使用等价类划分方法，我们把用例从100减少到了4，--很大的节省。</div>
+<div>现在，我们准备好测试了吗？也许还没有。象 969, -42, FRED, and &amp;$#!@的输入值呢？我们需要构建异常输入值吗？答案是，就像好的咨询师会告诉你，它取决于。。。为了搞清楚答案，我们需要先了解来自面向对象领域的契约式设计这个概念。</div>
+<div><br></div>
+<div>注意 根据圣经，Methuselah是在969岁死的，感谢Gideons创造了这么好记的数据而不需要上网查。</div>
+<div>在法律上，契约是两个个体或者团体之间的有法律效力的协议，定义双方能做什么和不能做什么，各自承诺形成互利。</div>
+<div><br></div>
+<div>在契约式设计中，模块（面向对象中叫方法），定义有前置条件和后置条件。后置条件定义了模块需要做什么（计算一个值，打开一个文件，打印一个报表，更新数据库记录，改变系统状态等）。前置条件定义模块要求以便达成后置条件。比如：你有一个模块叫做openFile，它需要做什么？打开一个文件。打开文件的前提条件是什么？第一，文件时存在的。第二，我们需要提供文件名称或其他可识别信息。第三，该文件可读，他不能被其他进程打开了。第四，我们需要有权限。等等。前置和后置条件形成了该模块和其他调用模块的契约。</div>
+<div><br></div>
+<div>基于契约的测试基于契约式设计哲学，它主要针对符合前置条件的情况设计用例，比如，对于openFile模块我们不会测试不存在文件下的情况，理由很简单，如果文件不存在，openFile没有承诺需要工作，如果它没有声明在特殊条件下能够工作，那么它没有必须要测试这种条件下的情况。</div>
+<div><br></div>
+<div>关于契约式设计希望得到更多信息参考： Bertrand Meyer's book 《Object-Oriented Software Construction》 </div>
+<div> 这种观点下，测试人员经常反对。是的，他们同意模块没有声明在这种情况下工作，但是假设在产品中前置条件违反了该怎么办？系统应该做什么？得到一个拼错的词？还是冒个烟？</div>
+<div><br></div>
+<div>不同于契约式设计的方法是防御式设计，在这种情况下，模块设计为可以接受任何输入。如果正常的前置条件遵循了，那么模块会达成正常的后置条件。如果前置条件没有遵循，模块会通知调用者，返回一个错误码，抛个异常等。这个通知就是模块其他的后置条件。基于此方法我们定义防御式测试：基于正常和异常前置条件测试方法。</div>
+<div><br></div>
+<div>看点： 我们课堂的学生Fred说，他不在乎什么设计，我们经常用的就是防御式测试。当我问为什么？他说，如果模块不工作，应该是谁的责任？负责人还是测试人员？</div>
+<div>怎么样应用于等价类划分？我们需要测试 -42, FRED, and &amp;$#!@吗？如果我们用契约式测试答案是否，如果我们是防御式测试，答案是是，问一下设计人员他们用什么设计方法，如果答案是契约或者防御式，那么你知道应该是什么测试。如果是“啊？”，意味着设计人员没有考虑过这个事情，那么你在集成测试初期将花费更多时间并且问题会复杂化。</div>
+</div>
+</div></body></html> 

@@ -1,0 +1,189 @@
+<html>
+<head>
+  <title>4.0 边界值测试</title>
+  <basefont face="Tahoma" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/268644 (zh-CN); Windows/5.1.2600 Service Pack 2;"/>
+  <style>
+    body, td {
+      font-family: Tahoma;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="382"/>
+<h1>4.0 边界值测试</h1>
+
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div style="text-align: left;"><font face="Verdana, Arial, Helvetica, sans-serif"><span style="font-size: 18px;"><br></span></font></div>
+<div style="font-family: Arial, Arial, Helvetica, sans-serif; margin-bottom: 0px; text-align: left; margin-left: 0.15in; margin-right: 0.15in;"><span style="font-size: 18px;"><a name="108"></a><a name="IDX-39"></a></span>
+<blockquote>
+<p style="text-align: left;font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;"><span style="font-size: 18px;"><i style="font-style: italic;">The Prince looked down at the motionless form of Sleeping Beauty, wondering how her supple lips would feel against his own and contemplating whether or not an Altoid was strong enough to stand up against the kind of morning breath only a hundred years' nap could create.</i></span></p>
+<p style="text-align: left;font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.9em; margin-bottom: 0px;"><span style="font-size: 18px;">— Lynne Sella</span></p>
+</blockquote>
+<font size="1"><a name="109"></a><a name="IDX-40"></a></font>
+<div><span style="font-size: 18px;"><a name="IDX-40"></a></span>
+<h2 style="margin-top: 1.2em; margin-bottom: 0em; color: rgb(0, 0, 128); background-color: white; background-image: none; font-weight: bold;"><span style="font-size: 18px;"><a name="ch04lev1sec1">介绍</a></span></h2>
+<h2 style="margin-top: 1.2em; margin-bottom: 0em; color: rgb(0, 0, 128); background-color: white; background-image: none; font-weight: bold;"><span style="font-size: 18px;">等价类划分测试是最基本的测试设计技术。他帮助测试人员选择可能覆盖最全的用例最小子集。等价类划分有另外一个用处，他引导我们进行边界值测试。</span></h2>
+<h2 style="margin-top: 1.2em; margin-bottom: 0em; color: rgb(0, 0, 128); background-color: white; background-image: none; font-weight: bold;"><span style="font-size: 18px; color: rgb(0, 0, 0); font-weight: normal;">在前一章节中，以下规则是指说明我们怎么根据年龄来确认是否雇用的程序。规则如下：</span></h2>
+<div style="margin-top: 0.9em; width: 871px;">
+<table border="0" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-size: 18px;">0–16</span></p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-size: 18px;">Don't hire</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-size: 18px;">16–18</span></p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-size: 18px;">Can hire on a part-time basis only</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-size: 18px;">18–55</span></p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-size: 18px;">Can hire as a full-time employee</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-size: 18px;">55–99</span></p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-size: 18px;">Don't hire</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><br></div>
+<div><span style="font-size: 18px;">注意边界中的问题，16在两个等价类中都存在，但结果不一致。</span></div>
+<div><span style="font-size: 18px;">边界值测试聚焦于边界因为在这些地方问题大量发生。有经验的测试人员深有体会，初学者有直觉认为问题会在这些地方出现。这些缺陷可以在需求中就存在也可能在代码中。：</span></div>
+<div><span style="font-size: 18px;">关键点： </span><span style="font-size: 18px;">边界值测试聚焦于边界因为在这些地方问题大量发生</span></div>
+<div><span style="font-size: 18px;"><a name="IDX-41"></a></span>
+<div style="display: inline !important;">
+<pre style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.4em; margin-left: 0px; margin-bottom: 0px; display: inline !important;">
+</pre>
+<hr></div>
+</div>
+<div><span style="font-size: 18px;"><a name="IDX-41"></a></span>
+<div style="display: inline !important;">
+<pre style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.4em; margin-left: 0px; margin-bottom: 0px; display: inline !important;">
+<span style="font-size: 18px;">      If (applicantAge &gt;= 0 &amp;&amp; applicantAge <b style="font-weight: bold;">&lt;=16</b>)</span>
+</pre></div>
+</div>
+<span style="font-size: 18px;"><a name="IDX-41"></a></span>
+<div>
+<pre style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.4em; margin-left: 0px; margin-bottom: 0px;">
+<span style="font-size: 18px;">                hireStatus=&quot;NO&quot;;
+      If (applicantAge <b style="font-weight: bold;">&gt;= 16</b> &amp;&amp; applicantAge &lt;=18)
+                hireStatus=&quot;PART&quot;;
+      If (applicantAge &gt;= 18 &amp;&amp; applicantAge &lt;=55)
+                hireStatus=&quot;FULL&quot;;
+      If (applicantAge &gt;= 55 &amp;&amp; applicantAge &lt;=99)
+                hireStatus=&quot;NO&quot;;
+</span>
+</pre>
+<hr>
+<pre>
+当然，开发人员的错误不同于测试错误，本来应该写大于的写成了大于等于是一个例子。
+</pre>
+<pre style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.4em; margin-left: 0px; margin-bottom: 0px;">
+<span style="font-size: 18px;">最有效的发现这些缺陷的方法是检视需求或者代码。Glib和Graham的书《Software Inspection 》对这个检视流程做了详细介绍。但是不管检视多有效，我们需要测试来验证正确性。</span>
+</pre>
+<pre style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.4em; margin-left: 0px; margin-bottom: 0px;">
+<span style="font-size: 18px;">也许规则应该是这样的：</span>
+</pre></div>
+<div style="margin-top: 0.9em; width: 871px;">
+<table border="0" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+<tbody>
+<tr valign="top">
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">0–15</p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Don't hire</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">16–17</p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Can hire on a part-time basis only</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">18–54</p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Can hire as full-time employees</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">55–99</p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Don't hire</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div><span style="font-size: 18px;"><br></span></div>
+<div><span style="font-size: 18px;">年龄是-3或者101呢？注意需求没有定义这个年龄这么处理。我们可以猜，但是猜需求不是很好的做法。</span></div>
+<div><span style="font-size: 18px;"><br></span></div>
+<div><span style="font-size: 18px;">代码实现可能如下:</span></div>
+<div>
+<hr>
+<span style="font-size: 18px;"><br></span></div>
+<span style="font-size: 18px; white-space: pre;"><a name="IDX-41">      If (applicantAge &gt;= 0 &amp;&amp; applicantAge &lt;=15)</a></span>
+<div>
+<pre style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.4em; margin-left: 0px; margin-bottom: 0px;">
+<span style="font-size: 18px;"><a name="IDX-41">                hireStatus=&quot;NO&quot;;
+      If (applicantAge &gt;= 16 &amp;&amp; applicantAge &lt;=17)
+                hireStatus=&quot;PART&quot;;</a><a name="112"></a><a name="IDX-42">
+      If (applicantAge &gt;= 18 &amp;&amp; applicantAge &lt;=54)
+                hireStatus=&quot;FULL&quot;;
+      If (applicantAge &gt;= 55 &amp;&amp; applicantAge &lt;=99)
+                hireStatus=&quot;NO&quot;;
+</a></span>
+</pre>
+<hr>
+<pre>
+有可能的输入边界值如：<span style="white-space: normal;"><a name="IDX-42" style="font-size: 18px;"> {-1, 0, 1}, {15, 16, 17}, {17, 18, 19}, {54, 55, 56}, and {98, 99, 100}. </a></span>
+</pre>
+<pre style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0.4em; margin-left: 0px; margin-bottom: 0px;">
+<span style="white-space: normal;"><a name="IDX-42" style="font-size: 18px;">其他值象</a></span><span style="white-space: normal;"><a name="IDX-42" style="font-size: 18px;"> {-42, 1001, FRED, %$#@} 取决于模块文档的前置条件如何描述。</a></span>
+</pre></div>
+</div>
+</div>
+<div><a name="IDX-42"></a>
+<table bgcolor="#E6E6E6" border="0" cellpadding="0" cellspacing="0" style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px;" width="100%">
+<tbody>
+<tr style="background-image: url(itss://chm/7898/images/tile_back.gif);">
+<td align="left" width="30%">
+<div style="margin-left: 0.15in;"><a href="itss://chm/7898/DDU0029.html"></a></div>
+</td>
+<td align="center" width="40%"><a href="itss://chm/7898/toc.html" style="color: white; text-decoration: none;"> &lt; Day Day Up &gt; </a></td>
+<td align="right" width="30%">
+<div style="margin-right: 0.15in;"><a href="itss://chm/7898/DDU0031.html"></a></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></body></html> 

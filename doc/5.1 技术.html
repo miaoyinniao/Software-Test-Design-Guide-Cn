@@ -1,0 +1,865 @@
+<html>
+<head>
+  <title>5.1 技术</title>
+  <basefont face="Tahoma" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/268644 (zh-CN); Windows/5.1.2600 Service Pack 2;"/>
+  <style>
+    body, td {
+      font-family: Tahoma;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="443"/>
+<h1>5.1 技术</h1>
+
+<div>
+<div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<font face="Verdana, Arial, Helvetica, sans-serif" style="font-size: 18px;">判定表基于条件集展现复杂业务规则。大致格式如下：<br></font>
+<div style="margin-bottom: 0px; text-align: left; margin-left: 0.15in; margin-right: 0.15in; font-family: Arial, Arial, Helvetica, sans-serif;">
+<div><span style="font-size: 18px;"><a name="ch05lev1sec2"></a><a name="136"></a><a name="ch05table01"></a></span>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 977px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 5-1: </span>The general form of a decision table.</span></caption>
+<thead>
+<tr valign="top">
+<th align="left" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;"> </th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 1</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 2</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;"><span style="font-family: 'Lucida Sans Unicode', Caslon, Arial, Arial, Helvetica, sans-serif;">…</span></b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule p</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Conditions</b></p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-1</p>
+</li>
+</ul>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-2</p>
+</li>
+</ul>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-family: 'Lucida Sans Unicode', Caslon, Arial, Arial, Helvetica, sans-serif;">…</span></p>
+</li>
+</ul>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-m</p>
+</li>
+</ul>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Actions</b></p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-1</p>
+</li>
+</ul>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-2</p>
+</li>
+</ul>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><span style="font-family: 'Lucida Sans Unicode', Caslon, Arial, Arial, Helvetica, sans-serif;">…</span></p>
+</li>
+</ul>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-n</p>
+</li>
+</ul>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+</tbody>
+</table>
+<div><br></div>
+<div><span style="font-size: 18px;"><a name="ch05table01">条件1到M代表不同的输入条件，动作1到N依赖于输入条件的组合。每个规则定义了唯一的条件组合，这些条件组合的结果来源于动作的执行。</a></span></div>
+<div><span style="font-size: 18px;"><a name="ch05table01">注意动作和条件的顺序无关，之和条件值相关（假设所有值有效），同时，动作只与特定条件相关，和前一输入条件或者系统状态无关。</a></span></div>
+<div><span style="font-size: 18px;"><a name="ch05table01">也许具体例子能说明这个概念，一个汽车保险公司给已婚和学生驾驶员打折扣，从条件开始，下面的判定表有2个条件，每个的值为是否。</a></span></div>
+<span style="font-size: 18px;"><a name="138"></a><a name="ch05table02"></a></span>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 977px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 5-2: </span>A decision table with two binary conditions.</span></caption>
+<thead>
+<tr valign="top">
+<th align="left" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;"> </th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 1</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 2</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 3</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 4</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Conditions</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;" valign="middle">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Married?</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Good Student?</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+</tbody>
+</table>
+<div><br></div>
+<span style="font-size: 18px;"><a name="ch05table02"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">注意表中包含所有条件的组合，2个二进制条件，组合：</span></div>
+<span style="font-size: 18px;"><a name="ch05table02"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">{Yes, Yes}, {Yes, No}, {No, Yes}, and {No, No}，每个规则代表一个组合，作为测试来说需要验证所有条件组合，漏掉一个组合就会导致漏掉系统中可能对这种情况没有处理的测试。</span></div>
+</div>
+<div><span style="font-size: 18px;">现在看动作，每个规则导致一个动作执行，每个规则确定了唯一的动作：<a name="ch05table03"></a></span>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 977px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 5-3: </span>Adding a single action to a decision table.</span></caption>
+<thead>
+<tr valign="top">
+<th align="left" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;"> </th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 1</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 2</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 3</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 4</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Conditions</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Married?</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Good Student?</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Actions</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Discount ($)</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">60</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">25</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">50</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div><br></div>
+<div>判定表可以为每个规则确定多个动作，那么，这些规则可能是单一的可能是共享的。</div>
+<a name="141"></a><a name="ch05table04"></a>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 977px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 5-4: </span>A decision table with multiple actions.</span></caption>
+<thead>
+<tr valign="top">
+<th align="left" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;"> </th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 1</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 2</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 3</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 4</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Conditions</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-1</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-2</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Actions</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-1</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do X</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do Y</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do X</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do Z</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-2</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do A</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div><br></div>
+<div>在这种情况下，选择测试用例很简单，每个规则（纵列）是一个用例，条件是输入，动作是预期输出。</div>
+<div>上面的例子条件采用简单的二进制取值，条件可以更复杂。</div>
+<a name="142"></a><a name="ch05table05"></a>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 977px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 5-5: </span>A decision table with non-binary conditions.</span></caption>
+<thead>
+<tr valign="top">
+<th align="left" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;"> </th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 1</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 2</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 3</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Rule 4</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Conditions</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-1</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">0–1</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">1–10</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">10–100</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">100–1000</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-2</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">&lt;5</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">5</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">6 or 7</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">&gt;7</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Actions</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-1</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do X</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do Y</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do X</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do Z</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-2</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do A</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+</tr>
+</tbody>
+</table>
+<a name="143"></a><a name="IDX-53"></a>
+<div><br></div>
+<div>在这种情况下，选取测试用例稍微复杂一些，每个规则（纵列）是一个用例但是条件取值需要确定。选择适合的值形成用例如下：</div>
+<a name="144"></a><a name="ch05table06"></a>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 977px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 5-6: </span>Sample test cases.</span></caption>
+<thead>
+<tr valign="top">
+<th align="left" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Test Case ID</b></p>
+</th>
+<th align="right" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Condition-1</b></p>
+</th>
+<th align="right" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Condition-2</b></p>
+</th>
+<th align="left" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Expected Result</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">TC1</p>
+</td>
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">0</p>
+</td>
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">3</p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do X / Do A</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">TC2</p>
+</td>
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">5</p>
+</td>
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">5</p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do Y / Do B</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">TC3</p>
+</td>
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">50</p>
+</td>
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">7</p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do X / Do B</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">TC4</p>
+</td>
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">500</p>
+</td>
+<td align="right" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">10</p>
+</td>
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do Z / Do B</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div><br></div>
+<div>如果被测系统有复杂的业务规则，如果你的设计人员和开发人员都没有把规则文档化，测试人员需要用判定表的形式梳理出这些信息，理由很简单，把系统行为用判定表完整而简洁的表示出来，测试用例可以直接从判定表生成。</div>
+<div>在测试中，为每个规则至少创建一个用例，如果规则条件是二进制，一个规则一个用例足够了，另外，如果条件是范围值，考虑边界值，进行组合。</div>
+<span style="font-size: 18px;"><a name="ch05table06"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">关键点：</span></div>
+<span style="font-size: 18px;"><a name="ch05table06"></a></span>
+<div style="display: inline !important;"><span style="font-size: 18px;">为每个规则至少创建一个用例</span></div>
+<span style="font-size: 18px;"><a name="ch05table06"></a></span>
+<div><span style="font-size: 18px;">为了方便查看，修改表头如下：</span></div>
+<span style="font-size: 18px;"><a name="145"></a><a name="IDX-54"></a><a name="146"></a><a name="ch05table07"></a></span>
+<table border="1" style="font-family: Verdana, Arial, Helvetica, sans-serif; margin-top: 1em; margin-bottom: 1em; width: 977px;">
+<caption style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span style="color: rgb(128, 0, 0); font-weight: bold; margin-top: 0.3em; margin-bottom: 0px; margin-left: 0px; text-align: left; font-family: Arial, Arial, Helvetica, sans-serif;"><span>Table 5-7: </span>A decision table converted to a test case table.</span></caption>
+<thead>
+<tr valign="top">
+<th align="left" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;"> </th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Test</b> <b style="font-weight: bold;">Case 1</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Test</b> <b style="font-weight: bold;">Case 2</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Test</b> <b style="font-weight: bold;">Case 3</b></p>
+</th>
+<th align="center" style="color: rgb(128, 0, 0); background-color: white; background-image: none; font-weight: bold; font-family: Arial, Arial, Helvetica, sans-serif;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Test</b> <b style="font-weight: bold;">Case 4</b></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Inputs</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-1</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Condition-2</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Yes</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">No</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;"><b style="font-weight: bold;">Expected</b> <b style="font-weight: bold;">Results</b></p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"> </td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-1</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do X</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do Y</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do X</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do Z</p>
+</td>
+</tr>
+<tr valign="top">
+<td align="left" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<ul style="list-style-type: none; list-style-position: initial; list-style-image: initial; margin-top: 0.4em; margin-bottom: 0em; margin-left: 0.2in;">
+<li style="margin-top: 0px; margin-left: 0.5em;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Action-2</p>
+</li>
+</ul>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do A</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+<td align="center" style="font-family: Arial, Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">
+<p style="margin-top: 0.4em; margin-bottom: 0px; margin-left: 0.3em; margin-right: 1em;">Do B</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div><br>
+<a name="ch05table07" style="font-size: 18px;"></a></div>
+</div>
+</div></body></html> 
