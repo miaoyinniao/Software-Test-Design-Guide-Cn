@@ -8,7 +8,7 @@ Software-Test-Design-Guide-Cn
  
 关于
 本文档是《A Practitioner's Guide to Software Test Design》一书的中文翻译稿， 
-大家可以在我的个人站（http://jhhuawei.com/ ）上找到我。
+我的微信公众号： 瓦力工坊。
 
 ==============================
 版权声明
